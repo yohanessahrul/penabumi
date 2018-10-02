@@ -1,0 +1,124 @@
+
+@media only screen and (min-width: 325px) {
+    .slideWraper {
+      background: gray; width: 100%; height: 150px;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .slideWraper {
+    background: #2498dc; width: 100%; height: 300px;
+  }
+  .mapImage {
+    width: 130%; left: -50px; top: 30px;
+  }
+  .o2oStyle {
+    width: 80%; top: 55px;
+  }
+  .h2Quote {
+    font-size: 18px;
+  }
+  .h3Program {
+    font-size: 20px;
+  }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .slideWraper {
+    background: blue; width: 100%; height: 350px;
+  }
+  .mapImage {
+    width: 100%;
+  }
+  .o2oStyle {
+    width: 60%;
+  }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .slideWraper {
+    background: green; width: 100%; height: 400px;
+  }
+  .mapImage {
+    width: 100%;
+  }
+  .o2oStyle {
+    width: 60%;
+    top: 55px;
+  }
+  .h2Quote {
+    font-size: 20px;
+  }
+  .imageCard {
+    width: 100%; height: 120px; background: red;
+  }
+  .h3Program {
+    font-size: 14px;
+  }
+  .ulStyleProgram {
+    height: 180px;
+  }
+  .ulStyleProgram {
+    height: 170px;
+  }
+  .ulStyleProgram > li {
+    font-size: 15px !important;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .slideWraper {
+    background: yellow; width: 100%; height: 500px;
+  }
+  .o2oStyle {
+    width: 60%; top: 55px;
+  }
+  .h2Quote {
+    font-size: 30px;
+  }
+  .imageCard {
+    width: 100%; height: 220px; background: red;
+  }
+  .h3Program {
+    font-size: 18px;
+  }
+  .ulStyleProgram {
+    height: 170px;
+  }
+  .ulStyleProgram > li {
+    font-size: 18px !important;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .slideWraper {
+    background: #4E94D9; width: 100%; height: 590px;
+  }
+  .mapImage {
+    width: 100%; top: -100px;
+  }
+  .o2oStyle {
+    width: 47%;
+    top: 100px;
+  }
+  .h2Quote {
+    font-size: 32px;
+  }
+  .imageCard {
+    width: 100%; height: 220px;
+  }
+  .h3Program {
+    font-size: 20px;
+  }
+  .ulStyleProgram {
+    height: 150px;
+  }
+  .ulStyleProgram > li {
+    font-size: 19px !important;
+  }
+}
