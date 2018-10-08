@@ -3,6 +3,7 @@ import Navigation from '../component/Navigation';
 import SliderSection from '../component/SliderSection';
 import CoreValue from '../component/CoreValue';
 import Program from '../component/Program';
+import Partnership from '../component/Partnership';
 import Footer from '../component/Footer';
 
 class Beranda extends Component {
@@ -17,7 +18,7 @@ class Beranda extends Component {
       this.setState({
         isLoading: true
       })
-    }, 1000);
+    }, 500);
   }
   render() {
     if (this.state.isLoading === false) {
@@ -33,6 +34,7 @@ class Beranda extends Component {
           <SliderSection/>
           <CoreValue/>
           <Program/>
+          <Partnership/>
           <Footer/>
         </div>
       );

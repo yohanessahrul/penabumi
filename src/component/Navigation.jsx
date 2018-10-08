@@ -29,7 +29,9 @@ class Navigation extends Component {
       <div style={{ width: '100%', height: '55px' }}>
         <Navbar color="light" light expand="md" fixed="top">
           <Container>
-            <NavbarBrand href="/">PENABUMI</NavbarBrand>
+            <NavbarBrand href="/">
+              <img src={'./images/pena-bumi-logo2.png'} alt="logo-penabumi"/>
+            </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>

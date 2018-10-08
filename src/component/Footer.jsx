@@ -15,24 +15,9 @@ class Footer extends Component {
               <div className="footer">
                 <h3 style={{ color: 'white' }}>PENABUMI</h3>
                 <p style={{ color: '#bcd1de', fontSize: '12px' }}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea quasi excepturi soluta sint libero voluptatum voluptatem dolore numquam perspiciatis aperiam quod ratione ipsum quisquam aliquam, odio repudiandae corporis optio mollitia.</p>
-              </div>
-            </Col>
-            <Col md="4">
-              <div className="footer">
-                <h5 style={{ color: 'white' }}>Kontak</h5>
                 <ul>
                   <li style={{ listStyle: 'none', display: 'table' }}>
-                    <Icon className="footerAddressIcon" style={{ float: 'left', padding: '0px 5px 10px 0px', marginTop: '2px', color: '#4adebc' }} size={11} icon={location}/>
-                    <div className="footerAddress">
-                      <p>
-                        Klinik Syifa Medika<br/>
-                        Jl. Proklamasi, Dusun Sinarsari RT 008/002, Kalangsari<br/>
-                        Rengasdengklok - Karawang 41352<br/>
-                      </p>
-                    </div>
-                  </li>
-                  <li style={{ listStyle: 'none', display: 'table' }}>
-                    <Icon className="footerAddressIcon" style={{ float: 'left', padding: '0px 5px 10px 0px', marginTop: '2px', color: '#4adebc' }} size={11} icon={envelope}/>
+                    <Icon className="footerAddressIcon" style={{ float: 'left', padding: '0px 10px 10px 0px', marginTop: '2px', color: '#4adebc' }} size={11} icon={envelope}/>
                     <div className="footerAddress">
                       <p>
                         info[at]penabumi.com
@@ -40,10 +25,36 @@ class Footer extends Component {
                     </div>
                   </li>
                   <li style={{ listStyle: 'none', display: 'table' }}>
-                    <Icon className="footerAddressIcon" style={{ float: 'left', padding: '0px 5px 10px 0px', marginTop: '2px', color: '#4adebc' }} size={11} icon={phone}/>
+                    <Icon className="footerAddressIcon" style={{ float: 'left', padding: '0px 10px 10px 0px', marginTop: '2px', color: '#4adebc' }} size={11} icon={phone}/>
                     <div className="footerAddress">
                       <p>
                         0878 79158765
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </Col>
+            <Col md="4">
+              <div className="footer">
+                <h5 style={{ color: 'white' }}>Alamat</h5>
+                <ul>
+                  <li style={{ listStyle: 'none', display: 'table' }}>
+                    {/* <Icon className="footerAddressIcon" style={{ float: 'left', padding: '0px 5px 10px 0px', marginTop: '2px', color: '#4adebc' }} size={11} icon={location}/> */}
+                    <div className="footerAddress">
+                      <p>
+                        Jl Caringin Barat 1 No 29A<br/>
+                        Jakarta Selatan, 12430<br/>
+                      </p>
+                    </div>
+                  </li>
+                  <li style={{ listStyle: 'none', display: 'table' }}>
+                    {/* <Icon className="footerAddressIcon" style={{ float: 'left', padding: '0px 5px 10px 0px', marginTop: '2px', color: '#4adebc' }} size={11} icon={location}/> */}
+                    <div className="footerAddress">
+                      <p>
+                        Klinik Syifa Medika<br/>
+                        Jl. Proklamasi, Dusun Sinarsari RT 008/002, Kalangsari<br/>
+                        Rengasdengklok - Karawang 41352<br/>
                       </p>
                     </div>
                   </li>
