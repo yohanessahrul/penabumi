@@ -31,7 +31,7 @@ class WizardForm extends Component {
     }
 
     render() {
-        const { onSubmit } = this.props
+        // const { onSubmit } = this.props
         const { page } = this.state
         return (
             <Container>

@@ -3,8 +3,8 @@ import { Field, reduxForm } from "redux-form";
 import { Container, Form, Button, Row, Col } from "reactstrap";
 import RenderField from "../RenderField";
 import validate from "./validate";
-import radioRender from "../radioRender";
-import { Agama, Tinggal } from "../dropdownRender";
+// import radioRender from "../radioRender";
+// import { Agama, Tinggal } from "../dropdownRender";
 import {individualFormAction} from '../../actions/individualForm'
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";

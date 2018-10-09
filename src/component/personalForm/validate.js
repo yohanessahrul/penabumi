@@ -4,7 +4,7 @@ import {
     errMail,
     isMail,
     isNum,
-    isWeb
+    // isWeb
     } from "../errorValMess";
     
     const validate = values => {

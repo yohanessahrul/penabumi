@@ -39,17 +39,14 @@ class Navigation extends Component {
                   <Link className="linkNavigation" to="/">Beranda</Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="linkNavigation" to="/register">Daftar</Link>
-                </NavItem>
-                <NavItem>
                   <Link className="linkNavigation" to="/about">Tentang</Link>
                 </NavItem>
                 <NavItem>
                   <Link className="linkNavigation" to="/contact">Kontak</Link>
                 </NavItem>
-                {/* <NavItem>
-                  <Link className="linkNavigation" to="/login">Login</Link>
-                </NavItem> */}
+                <NavItem>
+                  <Link className="linkNavigation" to="/register">Daftar</Link>
+                </NavItem>
               </Nav>
             </Collapse>
           </Container>
