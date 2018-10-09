@@ -128,3 +128,31 @@ nav.navbar.navbar-expand-md.navbar-light.bg-light.fixed-top {
 .previous{
   padding-right: 10px
 }
+
+/* .formInputContact {
+  border: thin solid #c2dce0!important;
+  background: #ecfcff !important;
+  border-radius: 5px;
+}
+.input-group-text {
+  background-color: none !important;
+}
+span.input-group-text  {
+  border: none !important;
+  background-color: #ecfcff !important;
+  display: table;
+  height: 100% !important;
+}
+.formInputContact > input.form-control, textarea.form-control {
+  border: none !important;
+  background: #ecfcff !important;
+}
+.InputAddon > span {
+  font-size: 16px;
+  padding: 6px 6px 6px 10px;
+}
+.textAreaAddon > span {
+  font-size: 16px;
+  padding: 6px 6px 6px 10px;
+  padding-bottom: 50px;
+} */

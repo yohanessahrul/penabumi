@@ -26,7 +26,6 @@ class App extends Component {
             <Route exact path="/personal-register" component={PersonalHome}/>
             <Route exact path="/confirm-page" component={confirmPage}/>
             <Route exact path="/user-confirm-page" component={confirmPageUser}/>
-            
           </Switch>
         </Router>
       </div>
