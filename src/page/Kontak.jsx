@@ -5,7 +5,7 @@ import {
   Container,
   Row,
   Col,
-  Button, Form, FormGroup, Label, Input, FormText
+  // Button, Form, FormGroup, Label, Input, FormText
 } from 'reactstrap';
 import Footer from '../component/Footer';
 
