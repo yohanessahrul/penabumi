@@ -111,3 +111,20 @@ nav.navbar.navbar-expand-md.navbar-light.bg-light.fixed-top {
   display: table;
   padding-bottom: -10px;
 }
+
+
+.errorStyle{
+  font-weight: bold;
+  color: red !important
+}
+
+.spasiButton{
+  margin:50px 10px 0px 10px
+}
+
+.next{
+  padding-left: 10px;
+}
+.previous{
+  padding-right: 10px
+}
