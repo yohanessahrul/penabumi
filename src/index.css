@@ -129,6 +129,22 @@ nav.navbar.navbar-expand-md.navbar-light.bg-light.fixed-top {
   padding-right: 10px
 }
 
+.linkNavigation {
+  padding: 8px 16px 8px 0px;
+  display: table;
+  color: #575757;
+  margin-top: 0px!important;
+}
+
+iframe{
+  overflow:hidden !important;
+}
+
+input.inputType.form-control, textarea.inputType.form-control {
+  background: #e1e1e1;
+  display: block;
+  /* margin-bottom: 25px; */
+}
 /* .formInputContact {
   border: thin solid #c2dce0!important;
   background: #ecfcff !important;

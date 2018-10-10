@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 import { Icon } from 'react-icons-kit';
 // import {location} from 'react-icons-kit/icomoon';
-import {envelope, phone, facebook, twitter, youtubePlay} from 'react-icons-kit/fa';
+import {envelope, phone, facebook, twitter, youtubePlay, instagram} from 'react-icons-kit/fa';
 
 class Footer extends Component {
   render() {
@@ -13,8 +13,11 @@ class Footer extends Component {
           <Row>
             <Col md="4">
               <div className="footer">
-                <h3 style={{ color: 'white' }}>PENABUMI</h3>
-                <p style={{ color: '#bcd1de', fontSize: '12px' }}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea quasi excepturi soluta sint libero voluptatum voluptatem dolore numquam perspiciatis aperiam quod ratione ipsum quisquam aliquam, odio repudiandae corporis optio mollitia.</p>
+                {/* <h3 style={{ color: 'white' }}>
+                </h3> */}
+                <img style={{ padding: '5px 15px', background: 'white', borderRadius: '5px' }} src={'../images/pena-bumi-logo.png'} alt="logo-penabumi-footer"/>
+                {/* <p style={{ color: '#bcd1de', fontSize: '12px' }}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea quasi excepturi soluta sint libero voluptatum voluptatem dolore numquam perspiciatis aperiam quod ratione ipsum quisquam aliquam, odio repudiandae corporis optio mollitia.</p> */}
+                <h5 style={{ color: 'white', marginTop: '30px' }}>Kontak</h5>
                 <ul>
                   <li style={{ listStyle: 'none', display: 'table' }}>
                     <Icon className="footerAddressIcon" style={{ float: 'left', padding: '0px 10px 10px 0px', marginTop: '2px', color: '#4adebc' }} size={16} icon={envelope}/>
@@ -42,6 +45,7 @@ class Footer extends Component {
                   <li style={{ listStyle: 'none', display: 'table' }}>
                     {/* <Icon className="footerAddressIcon" style={{ float: 'left', padding: '0px 5px 10px 0px', marginTop: '2px', color: '#4adebc' }} size={11} icon={location}/> */}
                     <div className="footerAddress">
+                      <h6 style={{ color: 'white' }}>Kantor Pusat</h6>
                       <p>
                         Jl Caringin Barat 1 No 29A<br/>
                         Jakarta Selatan, 12430<br/>
@@ -51,6 +55,7 @@ class Footer extends Component {
                   <li style={{ listStyle: 'none', display: 'table' }}>
                     {/* <Icon className="footerAddressIcon" style={{ float: 'left', padding: '0px 5px 10px 0px', marginTop: '2px', color: '#4adebc' }} size={11} icon={location}/> */}
                     <div className="footerAddress">
+                      <h6 style={{ color: 'white' }}>Kantor Cabang</h6>
                       <p>
                         Klinik Syifa Medika<br/>
                         Jl. Proklamasi, Dusun Sinarsari RT 008/002, Kalangsari<br/>
@@ -61,7 +66,7 @@ class Footer extends Component {
                 </ul>
               </div>
             </Col>
-            <Col>
+            <Col md="4">
               <div className="footer">
                 <h5 style={{ color: 'white' }}>Sosial Media</h5>
                 <ul>
@@ -69,7 +74,15 @@ class Footer extends Component {
                     <Icon className="footerAddressIcon" style={{ float: 'left', padding: '0px 10px 10px 0px', color: '#4adebc' }}  size={16} icon={facebook}/>
                     <div className="footerAddress">
                       <p>
-                        penabumiFB
+                        <a style={{ color: 'white', textDecoration: 'none' }} rel="noopener noreferrer" href="https://www.facebook.com/pena.bumi.39" target="_blank">Facebook Penabumi</a>
+                      </p>
+                    </div>
+                  </li>
+                  <li style={{ listStyle: 'none', display: 'table' }}>
+                    <Icon className="footerAddressIcon" style={{ float: 'left', padding: '0px 10px 10px 0px', color: '#4adebc' }}  size={16} icon={instagram}/>
+                    <div className="footerAddress">
+                      <p>
+                        <a style={{ color: 'white', textDecoration: 'none' }} rel="noopener noreferrer" href="https://www.instagram.com/_penabumi_/?hl=id" target="_blank">Instagram Penabumi</a>
                       </p>
                     </div>
                   </li>
@@ -77,7 +90,7 @@ class Footer extends Component {
                     <Icon className="footerAddressIcon" style={{ float: 'left', padding: '0px 10px 10px 0px', color: '#4adebc' }}  size={16} icon={twitter}/>
                     <div className="footerAddress">
                       <p>
-                        penabumiTwitt
+                        <a style={{ color: 'white', textDecoration: 'none' }} rel="noopener noreferrer" href="https://twitter.com/penabumi" target="_blank">Twitter Penabumi</a>
                       </p>
                     </div>
                   </li>
@@ -85,7 +98,7 @@ class Footer extends Component {
                     <Icon className="footerAddressIcon" style={{ float: 'left', padding: '0px 10px 10px 0px', color: '#4adebc' }}  size={16} icon={youtubePlay}/>
                     <div className="footerAddress">
                       <p>
-                        penabumiTube
+                        <a style={{ color: 'white', textDecoration: 'none' }} rel="noopener noreferrer" href="https://www.youtube.com/channel/UCpOEOxtV03-sQ8sji-zH7qA" target="_blank">Youtube Penabumi</a>
                       </p>
                     </div>
                   </li>

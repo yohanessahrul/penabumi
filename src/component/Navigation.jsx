@@ -8,6 +8,11 @@ import {
   Nav,
   NavItem,
   Container,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownItem,
+  DropdownMenu,
+
 } from 'reactstrap';
 
 class Navigation extends Component {
@@ -44,9 +49,23 @@ class Navigation extends Component {
                 <NavItem>
                   <Link className="linkNavigation" to="/contact">Kontak</Link>
                 </NavItem>
-                <NavItem>
-                  <Link className="linkNavigation" to="/register">Daftar</Link>
-                </NavItem>
+                <UncontrolledDropdown nav inNavbar>
+                  <DropdownToggle nav caret style={{ color: '#575757' }}>
+                    Daftar
+                  </DropdownToggle>
+                  <DropdownMenu right style={{ marginTop: '13px' }}>
+                    <DropdownItem style={{ background: 'white' }}>
+                      <Link style={{ color: '#575757', textDecoration: 'none' }} to="/institutional-register">
+                        Daftar Instansi
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem style={{ background: 'white' }}>
+                      <Link style={{ color: '#575757', textDecoration: 'none' }} to="/personal-register">
+                        Daftar Personal
+                      </Link>
+                    </DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
               </Nav>
             </Collapse>
           </Container>
