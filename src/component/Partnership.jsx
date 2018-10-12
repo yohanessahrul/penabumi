@@ -14,18 +14,25 @@ class Partnership extends Component {
                 dalam mengedepankan produk dengan hasil yang berkualitas.
               </h5>
               <Row style={{ width: '100%', marginTop: '20px', marginBottom: '30px' }}>
-                <Col md="4">
-                  <div style={{ width: '100%' }}>
+                <Col md="3" sm="6" xs="6">
+                  <div style={{ width: '100%', paddingTop: '35px' }}>
                     <img style={{ width: '70%', display: 'table', margin: '0 auto', padding: '10px' }} src={'./images/logo-cashlez.png'} alt="logo-cashlez"/>
                   </div>
                 </Col>
-                <Col md="4">
-                  <div style={{ width: '100%' }}>
+                <Col md="3" sm="6" xs="6">
+                  <div style={{ width: '100%', paddingTop: '5px' }}>
                     <img style={{ width: '70%', display: 'table', margin: '0 auto', padding: '10px' }} src={'./images/logo-nu.jpeg'} alt="logo-datamedis"/>
                   </div>
                 </Col>
-                <Col md="4">
-                  <img style={{ display: 'table', margin: '20px auto 10px auto', padding: '10px' }} src={'./images/logo-kemo.png'} alt="logo-kemo"/>
+                <Col md="3" sm="6" xs="6">
+                  <div style={{ width: '100%', }}>
+                    <img style={{ width: '45%', display: 'table', margin: '0 auto', padding: '10px' }} src={'./images/logo-rumah-tahfidz.jpeg'} alt="logo-rumah-tahfidz"/>
+                  </div>
+                </Col>
+                <Col md="3" sm="6" xs="6">
+                  <div style={{ width: '100%', paddingTop: '5px' }}>
+                    <img style={{ width: '90%', display: 'table', margin: '0 auto', padding: '10px' }} src={'./images/logo-yayasan-mulia-sejahtera2.jpeg'} alt="logo-yayasan-mulia-sejahtera"/>
+                  </div>
                 </Col>
               </Row>
             </Col>

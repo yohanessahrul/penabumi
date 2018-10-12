@@ -20,22 +20,10 @@ class Tentang extends Component {
               <div style={{ width: '100%', marginBottom: '10px', padding: '20px 10px' }}>
                 <h3 style={styles.h3}>Tentang</h3>
                 <p style={styles.p}>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, 
-                  sapiente temporibus aspernatur ex laboriosam impedit. 
-                  Totam perspiciatis repellat repellendus sed praesentium et 
-                  fugit officiis voluptate veniam consectetur. Doloribus, vel velit.
-                </p>
-                <h3 style={styles.h3}>Visi</h3>
-                <p style={styles.p}>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit 
-                  unde quis in quaerat voluptas magni quidem est aliquid delectus ipsam 
-                  soluta doloremque, ea ratione explicabo eveniet illum quasi quod sapiente?
-                </p>
-                <h3 style={styles.h3}>Misi</h3>
-                <p style={styles.p}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur 
-                  autem facere, vel perferendis rerum deserunt iure velit odio explicabo 
-                  esse fugit, sit eaque? Corrupti ullam tenetur sapiente a corporis sunt.
+                  <b>Penabumi</b> merupakan program beasiswa berdampak sosial yang membantu setiap individu
+                  yang ikut serta dapat berkembang secara ekonomi maupun kemampuan. Dengan program ini, kami
+                  mengedukasi peserta beasiswa dengan pengetahuan praktik grafis design sehingga dengan cepat
+                  merubah karir mereka.
                 </p>
               </div>
             </Col>
@@ -44,29 +32,29 @@ class Tentang extends Component {
                 <h3 style={styles.h3}>Tim Kami</h3>
                 <ul style={{ padding: '0px', margin: '0px' }}>
                   <li style={styles.li}>
-                    <p>
-                      Ruben Kurniawan : Pemilik Klinik Taman Anggrek
-                    </p>
-                    </li>
+                    Ruben Kurniawan : Pemilik Klinik Taman Anggrek
+                  </li>
                   <li style={styles.li}>
-                    <p>
-                      Sigit : Marketing Executive
-                    </p>
-                    </li>
+                    Sigit : Marketing Executive
+                  </li>
                   <li style={styles.li}>
-                    <p>
-                      Panut : Finance Staff
-                    </p>
-                    </li>
+                    Panut : Finance Staff
+                  </li>
                   <li style={styles.li}>
-                    <p>
-                      Yohanes & Alang : Web Developer
-                    </p>
-                    </li>
+                    Yohanes & Alang : Web Developer
+                  </li>
                 </ul>
               </div>
             </Col>
           </Row>
+          {/* <Row>
+            <Col>
+              <h3 style={{ textAlign: 'center' }}>Sejarah Pendek</h3>
+              <p style={{ color: 'gray' }}>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, asperiores reiciendis est harum sed quas quia hic, sunt, impedit architecto corporis nihil mollitia. Facilis fugiat deleniti nihil hic consectetur vitae!
+              </p>
+            </Col>
+          </Row> */}
         </Container>
         <Footer/>
       </div>
@@ -76,15 +64,15 @@ class Tentang extends Component {
 
 const styles = {
   h3: {
-    color: '#5f5f5f',
+    color: '#2d2d2d',
     fontFamily: 'Rubik',
   },
   p: {
-    color: 'gray',
+    color: '#464646',
     fontFamily: 'Rubik',
   },
   li: {
-    color: 'gray', 
+    color: '#464646', 
     listStyle: 'none',
     fontFamily: 'Rubik',
   },

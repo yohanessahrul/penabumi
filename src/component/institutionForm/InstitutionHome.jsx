@@ -14,7 +14,7 @@ class InstitutionHome extends Component {
   }
   submit = (values) => {
     this.props.foundationFormAction(values);
-  };
+  }
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
     return (

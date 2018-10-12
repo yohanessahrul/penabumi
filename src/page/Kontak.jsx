@@ -45,10 +45,17 @@ class Kontak extends Component {
                   </Col>
                   <Col md="9" sm="9" xs="9">
                     <h6 style={{ paddingTop: '10px', marginBottom: '0px', fontWeight: 'bold' }}>Alamat</h6>
-                    <p style={{ fontSize: '13px', lineHeight: '1.5em', padding: '5px 0px' }}>
+                    <p style={{ fontSize: '13px', fontWeight: 'bold', marginTop: '10px' }}>Kantor Pusat</p>
+                    <p style={{ fontSize: '13px', lineHeight: '1.5em', padding: '-30px 0px 5px 0px', marginTop: '-15px' }}>
                       Jl Caringin Barat 1 No.29A <br/>
                       RT 015/010, Terogong, Cilandak Barat <br/>
                       Jakarta Selatan, 146376
+                    </p>
+                    <p style={{ fontSize: '13px', fontWeight: 'bold', marginTop: '10px' }}>Kantor Cabang</p>
+                    <p style={{ fontSize: '13px', lineHeight: '1.5em', padding: '-30px 0px 5px 0px', marginTop: '-15px' }}>
+                      Klinik Syifa Medika <br/>
+                      Jl. Proklamasi, Dusun Sinarsari <br/> RT 008/002, Kalangsari <br/>
+                      Rengasdengklok - Karawang 41352
                     </p>
                   </Col>
                 </Row>
