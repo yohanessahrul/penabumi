@@ -15,13 +15,17 @@ class Partnership extends Component {
               </h5>
               <Row style={{ width: '100%', marginTop: '20px', marginBottom: '30px' }}>
                 <Col md="4">
-                  <img style={{ display: 'table', margin: '20px auto 10px auto', padding: '10px' }} src={'./images/logo-cashlez.png'} alt="logo-cashlez"/>
+                  <div style={{ width: '100%' }}>
+                    <img style={{ width: '70%', display: 'table', margin: '0 auto', padding: '10px' }} src={'./images/logo-cashlez.png'} alt="logo-cashlez"/>
+                  </div>
+                </Col>
+                <Col md="4">
+                  <div style={{ width: '100%' }}>
+                    <img style={{ width: '70%', display: 'table', margin: '0 auto', padding: '10px' }} src={'./images/logo-nu.jpeg'} alt="logo-datamedis"/>
+                  </div>
                 </Col>
                 <Col md="4">
                   <img style={{ display: 'table', margin: '20px auto 10px auto', padding: '10px' }} src={'./images/logo-kemo.png'} alt="logo-kemo"/>
-                </Col>
-                <Col md="4">
-                  <img style={{ display: 'table', margin: '20px auto 10px auto', padding: '10px' }} src={'./images/logo-datamedis.png'} alt="logo-datamedis"/>
                 </Col>
               </Row>
             </Col>

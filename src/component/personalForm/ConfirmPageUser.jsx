@@ -4,6 +4,10 @@ import history from "../../history";
 import { Container, Table, Row, Col, Button } from "reactstrap";
 import { reduxForm, reset } from "redux-form";
 class ConfirmUser extends Component {
+  componentWillMount(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
   constructor(props) {
     super(props);
     this.state = {

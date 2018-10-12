@@ -6,11 +6,12 @@ import Tentang from './page/Tentang';
 import Kontak from './page/Kontak';
 import Daftar from './component/DaftarHome';
 import Login from './page/Login';
-import InstitutionHome from './component/institutionForm/InstitutionHome'
-import PersonalHome from './component/personalForm/wizard'
-import confirmPage from './component/institutionForm/ConfirmPage'
-import confirmPageUser from './component/personalForm/ConfirmPageUser'
-import history from './history'
+import InstitutionHome from './component/institutionForm/InstitutionHome';
+import PersonalHome from './component/personalForm/wizard';
+import confirmPage from './component/institutionForm/ConfirmPage';
+import confirmPageUser from './component/personalForm/ConfirmPageUser';
+
+import history from './history';
 class App extends Component {
   render() {
     return (

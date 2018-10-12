@@ -8,6 +8,10 @@ import { foundationFormAction } from "../../actions/institutionForm";
 import { bindActionCreators } from "redux";
 
 class InstitutionHome extends Component {
+  componentWillMount(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
   submit = (values) => {
     this.props.foundationFormAction(values);
   };

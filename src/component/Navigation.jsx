@@ -12,7 +12,6 @@ import {
   DropdownToggle,
   DropdownItem,
   DropdownMenu,
-
 } from 'reactstrap';
 
 class Navigation extends Component {
@@ -50,10 +49,10 @@ class Navigation extends Component {
                   <Link className="linkNavigation" to="/contact">Kontak</Link>
                 </NavItem>
                 <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret style={{ color: '#575757' }}>
+                  <DropdownToggle className="linkNavigation" nav caret style={{ color: '#575757' }}>
                     Daftar
                   </DropdownToggle>
-                  <DropdownMenu right style={{ marginTop: '13px' }}>
+                  <DropdownMenu right style={{ marginTop: '23px' }}>
                     <DropdownItem style={{ background: 'white' }}>
                       <Link style={{ color: '#575757', textDecoration: 'none' }} to="/institutional-register">
                         Daftar Instansi

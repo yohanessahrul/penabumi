@@ -10,6 +10,10 @@ import Footer from '../component/Footer';
 
 
 class Kontak extends Component {
+  componentWillMount(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
   render() {
     return (
       <div>

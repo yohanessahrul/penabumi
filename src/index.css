@@ -8,6 +8,7 @@ nav.navbar.navbar-expand-md.navbar-light.bg-light.fixed-top {
   border-bottom: thin solid rgb(233, 233, 233);
 }
 .linkNavigation {
+  font-size: 16px;
   padding: 15px;
   color: #575757;
   /* font-family: 'Open Sans', 'Roboto', 'Helvetica', Sans-Serif; */
@@ -111,13 +112,10 @@ nav.navbar.navbar-expand-md.navbar-light.bg-light.fixed-top {
   display: table;
   padding-bottom: -10px;
 }
-
-
 .errorStyle{
   font-weight: bold;
   color: red !important
 }
-
 .spasiButton{
   margin:50px 10px 0px 10px
 }
@@ -135,40 +133,10 @@ nav.navbar.navbar-expand-md.navbar-light.bg-light.fixed-top {
   color: #575757;
   margin-top: 0px!important;
 }
-
 iframe{
   overflow:hidden !important;
 }
-
 input.inputType.form-control, textarea.inputType.form-control {
   background: #e1e1e1;
   display: block;
-  /* margin-bottom: 25px; */
 }
-/* .formInputContact {
-  border: thin solid #c2dce0!important;
-  background: #ecfcff !important;
-  border-radius: 5px;
-}
-.input-group-text {
-  background-color: none !important;
-}
-span.input-group-text  {
-  border: none !important;
-  background-color: #ecfcff !important;
-  display: table;
-  height: 100% !important;
-}
-.formInputContact > input.form-control, textarea.form-control {
-  border: none !important;
-  background: #ecfcff !important;
-}
-.InputAddon > span {
-  font-size: 16px;
-  padding: 6px 6px 6px 10px;
-}
-.textAreaAddon > span {
-  font-size: 16px;
-  padding: 6px 6px 6px 10px;
-  padding-bottom: 50px;
-} */

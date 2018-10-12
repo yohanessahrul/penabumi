@@ -7,6 +7,10 @@
     import { Agama, Tinggal } from "../dropdownRender";
 
     class PersonalHome extends Component {
+    componentWillMount(){
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
     render() {
         const { handleSubmit, pristine, submitting } = this.props;
         return (
