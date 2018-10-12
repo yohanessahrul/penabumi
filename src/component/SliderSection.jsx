@@ -6,8 +6,8 @@ class Slider extends Component {
     return (
       <div>
         <div className="slideWraper">
-          <img className="mapImage" alt="map" src={'/images/mapbackground.png'}/>
-          <img className="o2oStyle" alt="o2o" src={'/images/o2o.png'} />
+          <img className="mapImage" alt="map" src={'/images/mapbackground2.png'}/>
+          <img className="o2oStyle" alt="o2o" src={'/images/o2o2.png'} />
         </div>
       </div>
     );
