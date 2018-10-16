@@ -3,8 +3,10 @@
     import { Container, Form, Button, Row, Col } from "reactstrap";
     import RenderField from "../RenderField";
     import validate from "./validate";
-    import radioRender from "../radioRender";
-    import { Agama, Tinggal } from "../dropdownRender";
+    // import radioRender from "../radioRender";
+    import { Tinggal } from "../dropdownRender";
+    import Dropzone from '../dropzone'
+    // import {FileInput} from '../fileInputRender'
 
     class PersonalHome extends Component {
     render() {
@@ -22,11 +24,12 @@
                 <Row>
                 <Col md={6} xs={12}>
                 <Field
-                name="nama"
-                type="text"
-                component={RenderField}
-                label="Nama Lengkap"
+                    name="ktp"
+                    component={Dropzone}
                 />
+                <Field name="tinggal" component={Tinggal} label="Tinggal Di" />
+                </Col>
+                <Col md={6} xs={12}>
                 <Field
                 name="email"
                 type="text"
@@ -39,71 +42,9 @@
                 component={RenderField}
                 label="Nomor Hp/Wa"
                 />
-                <Field
-                name="tglLahir"
-                type="date"
-                component={RenderField}
-                label="Tanggal Lahir"
-                />
-                <Field
-                name="alamat"
-                type="text"
-                component={RenderField}
-                label="Alamat Sekarang"
-                />
-                <Field
-                name="alamatKtp"
-                type="text"
-                component={RenderField}
-                label="Alamat Pada KTP"
-                />
-                <Field
-                name="noKtp"
-                type="text"
-                component={RenderField}
-                label="Nomor KTP"
-                />
-                
-                </Col>
-                <Col md={6} xs={12}>
-                <Field
-                    name="kawin"
-                    type="text"
-                    component={RenderField}
-                    label="Status Perkawinan"
-                />
-                <Field
-                component={radioRender}
-                name="kelamin"
-                required={true}
-                options={[
-                    { title: "Pria", value: "Pria" },
-                    { title: "Wanita", value: "Wanita" }
-                ]}
-                label="Jenis Kelamin"
-                />
-                <Field name="agama" component={Agama} label="Agama" />
-                <Field name="tinggal" component={Tinggal} label="Tinggal Di" />
-                <Field
-                name="kendaraan"
-                type="text"
-                component={RenderField}
-                label="Jenis Kendaraan (jika ada)"
-                />
-                <Field
-                name="sim"
-                type="text"
-                component={RenderField}
-                label="Jenis Sim"
-                />
-                <Field
-                name="kepemilikan"
-                type="text"
-                component={RenderField}
-                label="Status Kepemilikan Kendaraan"
-                />
                 </Col>
             </Row>
+            <br/>
             <Row>
                 <Col>
                 <center>

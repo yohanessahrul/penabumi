@@ -8,16 +8,9 @@ class ConfirmUser extends Component {
     super(props);
     this.state = {
       personal: {
-        nama: "",
+        ktp:"",
         email: "",
         noUser: "",
-        tglLahir: "",
-        alamat: "",
-        alamatKtp: "",
-        noKtp: "",
-        kawin: "",
-        kelamin: "",
-        agama: "",
         tinggal: "",
         kendaraan: "",
         sim: "",
@@ -45,22 +38,16 @@ class ConfirmUser extends Component {
 
   componentDidMount() {
     const local = localStorage.getItem("formUser");
+    const imgPreview = localStorage.getItem("imgPreview")
     if (!local) {
       history.push("/");
     }
     const data = JSON.parse(local);
 
     const personal = {
-      nama: data.nama,
+      ktp: imgPreview,
       email: data.email,
       noUser: data.noUser,
-      tglLahir: data.tglLahir,
-      alamat: data.alamat,
-      alamatKtp: data.alamatKtp,
-      noKtp: data.noKtp,
-      kawin: data.kawin,
-      kelamin: data.kelamin,
-      agama: data.agama,
       tinggal: data.tinggal,
       kendaraan: data.kendaraan || "tidak punya",
       sim: data.sim || "tidak punya",
@@ -103,7 +90,7 @@ class ConfirmUser extends Component {
           <Row>
             <Col>
               <div>
-                <Table bordered>
+                <Table bordered color="primary">
                   <thead>
                     <tr>
                       <th colSpan="2">
@@ -113,8 +100,8 @@ class ConfirmUser extends Component {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Nama</td>
-                      <td>{personal.nama}</td>
+                      <td>KTP</td>
+                      <td><img style={{height:"200px",width:"300px"}} src={personal.ktp} alt="gambar preview ktp"/></td>
                     </tr>
                   </tbody>
                   <tbody>
@@ -127,42 +114,6 @@ class ConfirmUser extends Component {
                     <tr>
                       <td>No hp/Wa</td>
                       <td>{personal.noUser}</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td>Tanggal Lahir</td>
-                      <td>{personal.tglLahir}</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td>Alamat</td>
-                      <td>{personal.alamat}</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td>Alamat KTP</td>
-                      <td>{personal.alamatKtp}</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td>Status nikah</td>
-                      <td>{personal.kawin}</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td>Jenis Kelamin</td>
-                      <td>{personal.kelamin}</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td>Agama</td>
-                      <td>{personal.agama}</td>
                     </tr>
                   </tbody>
                   <tbody>
@@ -194,7 +145,7 @@ class ConfirmUser extends Component {
             </Col>
             <Col>
               <div>
-                <Table bordered>
+                <Table bordered color="info">
                   <thead>
                     <tr>
                       <th colSpan="2">
@@ -229,11 +180,11 @@ class ConfirmUser extends Component {
                 </Table>
               </div>
               <div>
-                <Table bordered>
+                <Table bordered color="warning">
                   <thead>
                     <tr>
                       <th colSpan="2">
-                        <center>Pendidikan Calon Kandidat</center>
+                        <center>PENDIDIKAN CALON KANDIDAT</center>
                       </th>
                     </tr>
                   </thead>
@@ -245,7 +196,7 @@ class ConfirmUser extends Component {
                   </tbody>
                   <tbody>
                     <tr>
-                      <td>Pendidiak Informal</td>
+                      <td>Pendidikan Informal</td>
                       <td>{pendidikan.informal}</td>
                     </tr>
                   </tbody>

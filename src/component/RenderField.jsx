@@ -8,9 +8,8 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => {
         <Label sm={2} md={12}>{label}</Label>
         <Col sm={10} md={12}>
           <Input
-            className="errorStyle"
+            className="inputType"
             {...input}
-            placeholder={label}
             type={type}
             
           />
@@ -23,7 +22,7 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => {
       <FormGroup row>
       <Label sm={2} md={12}>{label}</Label>
         <Col sm={10} md={12}>
-          <Input {...input} placeholder={label} type={type} />
+          <Input {...input}  className="inputType"  type={type} />
         </Col>
       </FormGroup>
     );

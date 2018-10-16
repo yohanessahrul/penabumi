@@ -5,12 +5,13 @@ import { reducer as formReducers } from 'redux-form'
 import contactForm from '../reducers/contactForm'
 import individualForm from '../reducers/individualForm'
 import foundationForm from '../reducers/institutionForm'
-
+import ktpUpload from '../reducers/ktpUpload'
 
 const rootReducers = combineReducers({
     contactForm,
     individualForm,
     foundationForm,
+    ktpUpload,
     form:formReducers
 })
 

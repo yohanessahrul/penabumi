@@ -3,7 +3,7 @@ import PersonalHome from './PersonalHome'
 import Wali from './Wali'
 import Pendidikan from './Pendidikan'
 import { Progress,Container } from 'reactstrap';
-// import { Values } from 'redux-form-website-template';
+import { Values } from 'redux-form-website-template';
 class WizardForm extends Component {
     constructor(props) {
         super(props)
@@ -56,7 +56,7 @@ class WizardForm extends Component {
                         {page === 2 && <Wali previousPage={this.previousPage} onSubmit={this.nextPage} />}
                         {page === 3 && <Pendidikan previousPage={this.previousPage} onSubmit={this.nextPage} />}
                     </div>
-                    {/* <Values form="personal"/> */}
+                    <Values form="personal"/>
                 </div>
             </Container>
         )

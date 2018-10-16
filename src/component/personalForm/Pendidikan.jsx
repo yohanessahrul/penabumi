@@ -3,20 +3,25 @@ import { Field, reduxForm } from "redux-form";
 import { Container, Form, Button, Row, Col } from "reactstrap";
 import RenderField from "../RenderField";
 import validate from "./validate";
-// import radioRender from "../radioRender";
-// import { Agama, Tinggal } from "../dropdownRender";
 import {individualFormAction} from '../../actions/individualForm'
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-
 class Pendidikan extends Component {
 
+
+  formDataify = (values) =>{
+    console.log('kiriman submit',values)
+    let formData = new FormData()
+    Object.keys(values).forEach(key => formData.append(key, values[key]));
+    console.log('di dataify',formData)
+    // return formData;
+  }
 submit = (values) =>{
   this.props.individualFormAction(values)
-  }
+}
   render() {
-    const { handleSubmit,previousPage } = this.props;
+    const { handleSubmit,previousPage,pristine,submitting } = this.props;
     
     return (
       <Container>
@@ -64,7 +69,7 @@ submit = (values) =>{
               <Button color="success" type="submit"  className="previous spasiButton" onClick={previousPage}>
                   KEMBALI
                 </Button>
-                <Button color="info" type="submit" className="spasiButton">
+                <Button color="info" type="submit" className="spasiButton" disabled={pristine || submitting}>
                   SELESAI
                 </Button>
               </center>

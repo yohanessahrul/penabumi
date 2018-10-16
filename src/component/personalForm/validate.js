@@ -67,7 +67,9 @@ import {
     }else if(!values.noUser.match(isNum)){
         errors.noUser = errNum
     }
-    
+    if(!values.ktp){
+        errors.ktp = errNull
+    }
     return errors
     };
     export default validate;
