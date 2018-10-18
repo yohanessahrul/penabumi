@@ -140,3 +140,22 @@ input.inputType.form-control, textarea.inputType.form-control {
   background: #e1e1e1;
   display: block;
 }
+
+.partnerFlexboxUl {
+  /* background: red; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  margin-top: 50px ;
+  margin-bottom: 50px ;
+}
+
+.partnerFlexboxUl > li {
+  width: 150px;
+  height: 100px;
+  /* background: red; */
+  margin-right: 10px;
+  margin-bottom: 10px;
+}

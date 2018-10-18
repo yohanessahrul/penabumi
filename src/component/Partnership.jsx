@@ -13,28 +13,23 @@ class Partnership extends Component {
                 Kami bekerja sama dengan berbagai perusahaan untuk menciptakan peluang bersama 
                 dalam mengedepankan produk dengan hasil yang berkualitas.
               </h5>
-              <Row style={{ width: '100%', marginTop: '20px', marginBottom: '30px' }}>
-                <Col md="3" sm="6" xs="6">
-                  <div style={{ width: '100%', paddingTop: '35px' }}>
-                    <img style={{ width: '70%', display: 'table', margin: '0 auto', padding: '10px' }} src={'./images/logo-cashlez.png'} alt="logo-cashlez"/>
-                  </div>
-                </Col>
-                <Col md="3" sm="6" xs="6">
-                  <div style={{ width: '100%', paddingTop: '5px' }}>
-                    <img style={{ width: '70%', display: 'table', margin: '0 auto', padding: '10px' }} src={'./images/logo-nu.jpeg'} alt="logo-datamedis"/>
-                  </div>
-                </Col>
-                <Col md="3" sm="6" xs="6">
-                  <div style={{ width: '100%', }}>
-                    <img style={{ width: '45%', display: 'table', margin: '0 auto', padding: '10px' }} src={'./images/logo-rumah-tahfidz.jpeg'} alt="logo-rumah-tahfidz"/>
-                  </div>
-                </Col>
-                <Col md="3" sm="6" xs="6">
-                  <div style={{ width: '100%', paddingTop: '5px' }}>
-                    <img style={{ width: '90%', display: 'table', margin: '0 auto', padding: '10px' }} src={'./images/logo-yayasan-mulia-sejahtera2.jpeg'} alt="logo-yayasan-mulia-sejahtera"/>
-                  </div>
-                </Col>
-              </Row>
+              <ul className="partnerFlexboxUl">
+                <li>
+                  <img style={{ width: '100%', display: 'table', marginTop: '25px' }} src={'./images/logo-cashlez.png'} alt="logo-cashlez"/>
+                </li>
+                <li>
+                  <img style={{ width: '100%',  }} src={'./images/logo-nu.jpeg'} alt="logo-datamedis"/>
+                </li>
+                <li>
+                  <img style={{ height: '100%', display: 'table', margin: '0 auto' }} src={'./images/logo-rumah-tahfidz.jpeg'} alt="logo-rumah-tahfidz"/>
+                </li>
+                <li>
+                  <img style={{ width: '100%', display: 'table', marginTop: '10px' }} src={'./images/logo-yayasan-mulia-sejahtera2.jpeg'} alt="logo-yayasan-mulia-sejahtera"/>
+                </li>
+                <li>
+                  <img style={{ width: '100%', display: 'table', marginTop: '25px' }} src={'./images/logo-sos.png'} alt="logo-sos"/>
+                </li>
+              </ul>
             </Col>
           </Row>
         </Container>
