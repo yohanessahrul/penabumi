@@ -3,8 +3,7 @@ import { Field, reduxForm } from "redux-form";
 import { Container, Form, Button, Row, Col } from "reactstrap";
 import RenderField from "../RenderField";
 import validate from "./validate";
-// import radioRender from "../radioRender";
-// import { Agama, Tinggal } from "../dropdownRender";
+import {renderNoHp} from '../noHpRender'
 
 class Wali extends Component {
   render() {
@@ -40,7 +39,7 @@ class Wali extends Component {
                     name="noWali"
                     type="text"
                     label="No/Wa Wali/Penanggung Jawab"
-                    component={RenderField}
+                    component={renderNoHp}
                 />
                 <Field
                     name="emailWali"

@@ -11,6 +11,7 @@
     "react-dom": "^16.5.2",
     "react-dropzone": "^6.0.4",
     "react-icons-kit": "^1.1.12",
+    "react-number-format": "^3.6.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",

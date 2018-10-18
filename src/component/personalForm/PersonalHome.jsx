@@ -1,13 +1,13 @@
     import React, { Component } from "react";
-    import { Field, reduxForm } from "redux-form";
+    import { Field, reduxForm,formValueSelector } from "redux-form";
     import { Container, Form, Button, Row, Col } from "reactstrap";
     import RenderField from "../RenderField";
     import validate from "./validate";
-    // import radioRender from "../radioRender";
+    import radioRender from "../radioRender";
     import { Tinggal } from "../dropdownRender";
     import Dropzone from '../dropzone'
-    // import {FileInput} from '../fileInputRender'
-
+    import { connect } from 'react-redux'
+    import {renderNoHp} from '../noHpRender'
     class PersonalHome extends Component {
     render() {
         const { handleSubmit, pristine, submitting } = this.props;
@@ -26,6 +26,7 @@
                 <Field
                     name="ktp"
                     component={Dropzone}
+                    label="Upload Foto KTP Anda Disini"
                 />
                 <Field name="tinggal" component={Tinggal} label="Tinggal Di" />
                 </Col>
@@ -39,9 +40,28 @@
                 <Field
                 name="noUser"
                 type="text"
-                component={RenderField}
+                component={renderNoHp}
                 label="Nomor Hp/Wa"
                 />
+                <div style={{marginTop:"10px"}}>
+                <label htmlFor="kendaraan" style={{marginRight:"10px"}}>Punya Kendaraan</label>
+                <Field
+                name="kendaraan"
+                type="checkbox"
+                component="input"
+                />
+                </div>
+                {this.props.punyaKendaraan && (
+            <Field
+            name="jenisKendaraan"
+            component={radioRender}
+            options={[
+                { title: "Motor", value: "Motor" },
+                { title: "Mobil", value: "Mobil" },
+            ]}
+            label="Jenis Kendaraan"
+            />
+            )}
                 </Col>
             </Row>
             <br/>
@@ -60,9 +80,18 @@
     }
     }
 
-    export default reduxForm({
+    PersonalHome = reduxForm({
         form: "personal",
         destroyOnUnmount: false,
         forceUnregisterOnUnmount: true,
         validate
-    })(PersonalHome);
+    })(PersonalHome)
+
+    const selector = formValueSelector('personal')
+    PersonalHome = connect(state=>{
+        const punyaKendaraan = selector(state,'kendaraan')
+        return{
+            punyaKendaraan
+        }
+    })(PersonalHome)
+    export default PersonalHome

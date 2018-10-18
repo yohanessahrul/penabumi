@@ -13,8 +13,7 @@ class ConfirmUser extends Component {
         noUser: "",
         tinggal: "",
         kendaraan: "",
-        sim: "",
-        kepemilikan: ""
+        jenisKendaraan:""
       },
       wali: {
         namaWali: "",
@@ -26,7 +25,9 @@ class ConfirmUser extends Component {
         formal: "",
         informal: "",
         bahasa: "",
-        ormas: ""
+        ormas: "",
+        ijazah:"",
+        karya:""
       }
     };
   }
@@ -50,8 +51,7 @@ class ConfirmUser extends Component {
       noUser: data.noUser,
       tinggal: data.tinggal,
       kendaraan: data.kendaraan || "tidak punya",
-      sim: data.sim || "tidak punya",
-      kepemilikan: data.kepemilikan || "tidak punya"
+      jenisKendaraan: data.jenisKendaraan || "tidak punya"
     };
 
     const wali = {
@@ -65,7 +65,9 @@ class ConfirmUser extends Component {
       formal: data.formal,
       informal: data.informal || "tidak ada",
       bahasa: data.bahasa || "tidak ada",
-      ormas: data.ormas || "tidak ada"
+      ormas: data.ormas || "tidak ada",
+      karya:data.karya || "tidak ada",
+      ijazah:data.ijazah || "tidak ada"
     };
 
     this.setState({
@@ -123,22 +125,32 @@ class ConfirmUser extends Component {
                     </tr>
                   </tbody>
                   <tbody>
+                  {
+                    personal.kendaraan === true ?
+                    <tr>
+                      <td>Kendaraan</td>
+                      <td>Punya</td>
+                    </tr>
+                  :
                     <tr>
                       <td>Kendaraan</td>
                       <td>{personal.kendaraan}</td>
                     </tr>
+                  
+                  }
                   </tbody>
                   <tbody>
-                    <tr>
-                      <td>SIM</td>
-                      <td>{personal.sim}</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td>Kepemilikan Kendaraan</td>
-                      <td>{personal.kepemilikan}</td>
-                    </tr>
+                  {
+                  personal.kendaraan !== "tidak punya" ? 
+                  <tr>
+                  <td>Jenis Kendaraan</td>
+                  <td>{personal.jenisKendaraan}</td>
+                  </tr>
+                  : <tr>
+                    <td>Jenis Kendaraan</td>
+                    <td>Tidak Punya</td>
+                  </tr>
+                  }
                   </tbody>
                 </Table>
               </div>
@@ -210,6 +222,24 @@ class ConfirmUser extends Component {
                     <tr>
                       <td>Aktif Dalam Organisasi</td>
                       <td>{pendidikan.ormas}</td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <td>Ijazah</td>
+                      {
+                        pendidikan.ijazah !== "tidak ada" ? 
+                        <td> <a href={pendidikan.ijazah.replace(/ /g,"%20")}>Link Download Ijazah</a> </td> : <td>Tidak Mengupload</td>
+                      }
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <td>Karya</td>
+                      {
+                        pendidikan.karya !== "tidak ada" ? 
+                        <td> <a href={pendidikan.karya.replace(/ /g,"%20")}>Link Download Ijazah</a> </td> : <td>Tidak Mengupload</td>
+                      }
                     </tr>
                   </tbody>
                 </Table>

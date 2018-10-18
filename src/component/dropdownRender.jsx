@@ -26,39 +26,37 @@ const kawin = [
 
 export const Agama = ({ label,input, meta: { touched, error } }) => (
     <FormGroup>
-        <Label sm={2} md={12}>{label}</Label>
+        <Label sm={2} md={12}>{label} {touched && error && <span className="errorStyle">{error}</span>}</Label>
         <Col sm={10} md={12}>
-        <Input type="select" {...input}>
+        <Input className="inputType"  type="select" {...input}>
             <option value="">Agama Anda</option>
             {agama.map(val => <option value={val} key={val}>{val}</option>)}
         </Input>
-        {touched && error && <span className="errorStyle">{error}</span>}
         </Col>
     </FormGroup>
 );
 
 export const Tinggal = ({ label,input, meta: { touched, error } }) => (
     <div>
-        <Label sm={2} md={12}>{label}</Label>
+        <Label sm={2} md={12}>{label} {touched && error && <span className="errorStyle">{error}</span>}</Label>
         <Col sm={10} md={12}>
-        <Input type="select" {...input}>
+        <Input className="inputType" type="select" {...input}>
             <option value="">Jenis Tempat Tinggal</option>
             {tinggal.map(val => <option value={val} key={val}>{val}</option>)}
         </Input>
-        {touched && error && <span className="errorStyle">{error}</span>}
+    
         </Col>
     </div>
 );
 
 export const Kawin = ({ label,input, meta: { touched, error } }) => (
     <div>
-        <Label sm={2} md={12}>{label}</Label>
+        <Label sm={2} md={12}>{label} {touched && error && <span className="errorStyle">{error}</span>}</Label>
         <Col sm={10} md={12}>
-        <Input type="select" {...input}>
+        <Input className="inputType" type="select" {...input}>
             <option value="">Jenis Tempat Tinggal</option>
             {kawin.map(val => <option value={val} key={val}>{val}</option>)}
         </Input>
-        {touched && error && <span className="errorStyle">{error}</span>}
         </Col>
     </div>
 );

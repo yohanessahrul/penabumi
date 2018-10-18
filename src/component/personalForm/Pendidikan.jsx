@@ -6,17 +6,11 @@ import validate from "./validate";
 import {individualFormAction} from '../../actions/individualForm'
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-
+import DropKarya from '../dropzoneKarya'
+import DropIjazah from '../dropzoneIjazah'
 class Pendidikan extends Component {
 
 
-  formDataify = (values) =>{
-    console.log('kiriman submit',values)
-    let formData = new FormData()
-    Object.keys(values).forEach(key => formData.append(key, values[key]));
-    console.log('di dataify',formData)
-    // return formData;
-  }
 submit = (values) =>{
   this.props.individualFormAction(values)
 }
@@ -47,11 +41,16 @@ submit = (values) =>{
                     label="Pendidikan Informal"
                     component={RenderField}
                 />
+                <Field
+                    name="karya"
+                    component={DropKarya}
+                    label = "Upload Karya-Karya Anda Menggunakan .zip file"
+                />
             </Col>
             <Col  md={6} xs={12}>
             <Field
                     name="bahasa"
-                    type="textarea"
+                    type="text"
                     label="Menguasai Bahasa (sebutkan)"
                     component={RenderField}
                 />
@@ -60,6 +59,11 @@ submit = (values) =>{
                     type="text"
                     label="Kegiatan Berorganisasi (sebutkan) "
                     component={RenderField}
+                />
+                <Field
+                    name="ijazah"
+                    component={DropIjazah}
+                    label = "Upload Ijazah Terakhir Dan Sertifikat Pendidikan Informal (jika ada) Anda Menggunakan .zip file"
                 />
             </Col>
           </Row>

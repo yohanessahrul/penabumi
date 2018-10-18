@@ -17,6 +17,13 @@ export default class DropRender extends Component {
         }
     }
 
+    componentDidMount(){
+        window.onload = function() {
+            if (performance.navigation.type === 1) {
+                localStorage.removeItem('imgPreview');
+            }
+        }
+    }
     verifyFile = (files) =>{
        if(files && files.length > 0){
         const currentFile = files[0]
@@ -50,8 +57,8 @@ export default class DropRender extends Component {
                     })
                     localStorage.setItem('imgPreview',this.state.imgPreview)
                     var formData = new FormData()
-                    formData.append('ktp',currentFile)
-                    axios.post(`http://localhost:3000/api/formuser/ktpImage`,formData)
+                    formData.append('image',currentFile)
+                    axios.post(`http://neoal.xyz:3001/api/formuser/imagefile`,formData)
                     .then(response=>{
                         // console.log(response.data.link)
                         this.setState({
@@ -59,7 +66,7 @@ export default class DropRender extends Component {
                         })
                         input.onChange(this.state.imgUpload)
                     }).catch(err=>{
-                        console.log(err)
+                        alertify.alert(err,"terjadi kesalahan Hubungi Kontak")
                     })  
                 },false)
                 reader.readAsDataURL(currentFile)
@@ -75,9 +82,9 @@ export default class DropRender extends Component {
     localStorage.removeItem("imgPreview")
     }
 render() {
-    const {input,meta:{touched,error}} = this.props
+    const {input,meta:{touched,error},label} = this.props
     const {imgPreview,imgUpload} = this.state
-    console.log(this.props.input.value)
+    // console.log(this.props.input.value)
     const imageOffline = localStorage.getItem("imgPreview")
     return (
     <div>
@@ -93,7 +100,7 @@ render() {
         </center>
             </div> : <center> <img alt="loading" src={'/loader-bars.gif'} /> </center> }
         </div> : <center >
-        <Dropzone {...input} multiple={false} accept={acceptedFileType} onDrop={this.handleOnDrop}><center>Klik/Seret Gambar Untuk Di Upload
+        <Dropzone {...input} multiple={false} accept={acceptedFileType} onDrop={this.handleOnDrop}><center>{label}
                 <br/>
                 {touched && error && <span className="errorStyle">{error}</span>}
             </center></Dropzone>

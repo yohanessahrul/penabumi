@@ -56,7 +56,7 @@ class WizardForm extends Component {
                         {page === 2 && <Wali previousPage={this.previousPage} onSubmit={this.nextPage} />}
                         {page === 3 && <Pendidikan previousPage={this.previousPage} onSubmit={this.nextPage} />}
                     </div>
-                    <Values form="personal"/>
+                    {/* <Values form="personal"/> */}
                 </div>
             </Container>
         )
