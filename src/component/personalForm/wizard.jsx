@@ -3,7 +3,7 @@ import PersonalHome from './PersonalHome'
 import Wali from './Wali'
 import Pendidikan from './Pendidikan'
 import { Progress,Container } from 'reactstrap';
-// import { Values } from 'redux-form-website-template';
+import { Values } from 'redux-form-website-template';
 class WizardForm extends Component {
     constructor(props) {
         super(props)

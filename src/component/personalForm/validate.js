@@ -51,8 +51,6 @@ import {
     }
     if(!values.noWali){
         errors.noWali = errNull
-    }else if(!values.noWali.match(isNum)){
-        errors.noWali = errNum
     }
     if(!values.formal){
         errors.formal = errNull
@@ -64,10 +62,16 @@ import {
     }
     if(!values.noUser){
         errors.noUser = errNull
-    }else if(!values.noUser.match(isNum)){
-        errors.noUser = errNum
     }
-    
+    if(!values.ktp){
+        errors.ktp = errNull
+    }
+    if(!values.ijazah){
+        errors.ijazah = errNull
+    }
+    if(!values.karya){
+        errors.karya = errNull
+    }
     return errors
     };
     export default validate;

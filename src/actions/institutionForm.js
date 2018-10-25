@@ -1,11 +1,12 @@
 import axios from 'axios'
 import history from '../history'
+import alertify from 'alertifyjs';
 export function foundationFormAction(values){
     return dispatch => {
         dispatch(loading())
         axios.post('http://neoal.xyz:3001/api/foundationform/sendmail',{values})
         .then(response=>{
-            console.log(response)
+            // console.log(response)
             if(response.data.message){
             localStorage.setItem("formYayasan", JSON.stringify(values));
             dispatch(success(values))
@@ -13,6 +14,7 @@ export function foundationFormAction(values){
             }
         })
         .catch(err=>{
+            alertify.alert(err,"terjadi kesalahan Hubungi Kontak")
             dispatch(error(err))
         })
     }

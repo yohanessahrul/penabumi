@@ -6,7 +6,7 @@ import validate from "./validate";
 import { connect } from "react-redux";
 import { foundationFormAction } from "../../actions/institutionForm";
 import { bindActionCreators } from "redux";
-
+import {renderNoHp} from '../noHpRender'
 class InstitutionHome extends Component {
   componentWillMount(){
     document.body.scrollTop = 0;
@@ -36,44 +36,44 @@ class InstitutionHome extends Component {
                 name="namaYayasan"
                 type="text"
                 component={RenderField}
-                label="Nama Yayasan"
+                label="Nama"
               />
               <Field
                 name="alamatYayasan"
                 type="text"
                 component={RenderField}
-                label="Alamat Yayasan"
+                label="Alamat"
               />
+                <Field
+                  name="noYayasan"
+                  type="text"
+                  component={renderNoHp}
+                  label="Nomor Telpon/Wa Yayasan"
+                />
               <Field
                 name="emailYayasan"
                 type="text"
                 component={RenderField}
-                label="Email Yayasan"
-              />
-              <Field
-                name="noYayasan"
-                type="text"
-                component={RenderField}
-                label="Nomor Telpon/Wa Yayasan"
+                label="Email"
               />
               <Field
                 name="website"
                 type="text"
                 component={RenderField}
-                label="Website Yayasan"
+                label="Website"
               />
               <Field
                 name="jenis"
                 type="text"
                 component={RenderField}
-                label="Jenis Yayasan"
+                label="Jenis"
               />
             </Col>
             <Col xs={12} md={6}>
               <Row>
                 <Col>
                   <center>
-                    <h5>DATA PENDAFTAR</h5>
+                    <h5>DATA PIC</h5>
                   </center>
                 </Col>
               </Row>
@@ -81,31 +81,25 @@ class InstitutionHome extends Component {
                 name="namaPendaftar"
                 type="text"
                 component={RenderField}
-                label="Nama Lengkap Pendaftar"
+                label="Nama Lengkap"
               />
               <Field
                 name="emailPendaftar"
                 type="text"
                 component={RenderField}
-                label="Email Pendaftar"
+                label="Email"
               />
               <Field
                 name="noPendaftar"
                 type="text"
-                component={RenderField}
-                label="Nomor Telp/Wa Pendaftar"
-              />
-              <Field
-                name="pic"
-                type="text"
-                component={RenderField}
-                label="Pic Pendaftar"
+                component={renderNoHp}
+                label="Nomor Telp/Wa"
               />
               <Field
                 name="jabatan"
                 type="text"
                 component={RenderField}
-                label="Jabatan Pendaftar"
+                label="Jabatan"
               />
             </Col>
           </Row>

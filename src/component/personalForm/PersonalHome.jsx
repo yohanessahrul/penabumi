@@ -1,11 +1,13 @@
     import React, { Component } from "react";
-    import { Field, reduxForm } from "redux-form";
+    import { Field, reduxForm,formValueSelector } from "redux-form";
     import { Container, Form, Button, Row, Col } from "reactstrap";
     import RenderField from "../RenderField";
     import validate from "./validate";
     import radioRender from "../radioRender";
-    import { Agama, Tinggal } from "../dropdownRender";
-
+    import { Tinggal } from "../dropdownRender";
+    import Dropzone from '../dropzone'
+    import { connect } from 'react-redux'
+    import {renderNoHp} from '../noHpRender'
     class PersonalHome extends Component {
     componentWillMount(){
       document.body.scrollTop = 0;
@@ -26,11 +28,13 @@
                 <Row>
                 <Col md={6} xs={12}>
                 <Field
-                name="nama"
-                type="text"
-                component={RenderField}
-                label="Nama Lengkap"
+                    name="ktp"
+                    component={Dropzone}
+                    label="Upload Foto KTP Anda Disini"
                 />
+                <Field name="tinggal" component={Tinggal} label="Tinggal Di" />
+                </Col>
+                <Col md={6} xs={12}>
                 <Field
                 name="email"
                 type="text"
@@ -40,74 +44,31 @@
                 <Field
                 name="noUser"
                 type="text"
-                component={RenderField}
+                component={renderNoHp}
                 label="Nomor Hp/Wa"
                 />
-                <Field
-                name="tglLahir"
-                type="date"
-                component={RenderField}
-                label="Tanggal Lahir"
-                />
-                <Field
-                name="alamat"
-                type="text"
-                component={RenderField}
-                label="Alamat Sekarang"
-                />
-                <Field
-                name="alamatKtp"
-                type="text"
-                component={RenderField}
-                label="Alamat Pada KTP"
-                />
-                <Field
-                name="noKtp"
-                type="text"
-                component={RenderField}
-                label="Nomor KTP"
-                />
-                
-                </Col>
-                <Col md={6} xs={12}>
-                <Field
-                    name="kawin"
-                    type="text"
-                    component={RenderField}
-                    label="Status Perkawinan"
-                />
-                <Field
-                component={radioRender}
-                name="kelamin"
-                required={true}
-                options={[
-                    { title: "Pria", value: "Pria" },
-                    { title: "Wanita", value: "Wanita" }
-                ]}
-                label="Jenis Kelamin"
-                />
-                <Field name="agama" component={Agama} label="Agama" />
-                <Field name="tinggal" component={Tinggal} label="Tinggal Di" />
+                <div style={{marginTop:"10px"}}>
+                <label htmlFor="kendaraan" style={{marginRight:"10px"}}>Punya Kendaraan</label>
                 <Field
                 name="kendaraan"
-                type="text"
-                component={RenderField}
-                label="Jenis Kendaraan (jika ada)"
+                type="checkbox"
+                component="input"
                 />
-                <Field
-                name="sim"
-                type="text"
-                component={RenderField}
-                label="Jenis Sim"
-                />
-                <Field
-                name="kepemilikan"
-                type="text"
-                component={RenderField}
-                label="Status Kepemilikan Kendaraan"
-                />
+                </div>
+                {this.props.punyaKendaraan && (
+            <Field
+            name="jenisKendaraan"
+            component={radioRender}
+            options={[
+                { title: "Motor", value: "Motor" },
+                { title: "Mobil", value: "Mobil" },
+            ]}
+            label="Jenis Kendaraan"
+            />
+            )}
                 </Col>
             </Row>
+            <br/>
             <Row>
                 <Col>
                 <center>
@@ -123,9 +84,18 @@
     }
     }
 
-    export default reduxForm({
+    PersonalHome = reduxForm({
         form: "personal",
         destroyOnUnmount: false,
         forceUnregisterOnUnmount: true,
         validate
-    })(PersonalHome);
+    })(PersonalHome)
+
+    const selector = formValueSelector('personal')
+    PersonalHome = connect(state=>{
+        const punyaKendaraan = selector(state,'kendaraan')
+        return{
+            punyaKendaraan
+        }
+    })(PersonalHome)
+    export default PersonalHome
