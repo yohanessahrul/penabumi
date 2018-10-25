@@ -148,12 +148,6 @@ class ConfirmPage extends Component {
                   </tbody>
                   <tbody>
                     <tr>
-                      <td>Pic Pendaftar</td>
-                      <td>{pendaftar.pic}</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
                       <td>Jabatan Pendaftar</td>
                       <td>{pendaftar.jabatan}</td>
                     </tr>

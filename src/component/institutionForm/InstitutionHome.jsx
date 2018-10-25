@@ -6,7 +6,7 @@ import validate from "./validate";
 import { connect } from "react-redux";
 import { foundationFormAction } from "../../actions/institutionForm";
 import { bindActionCreators } from "redux";
-
+import {renderNoHp} from '../noHpRender'
 class InstitutionHome extends Component {
   submit = (values) => {
     this.props.foundationFormAction(values);
@@ -40,17 +40,17 @@ class InstitutionHome extends Component {
                 component={RenderField}
                 label="Alamat"
               />
+                <Field
+                  name="noYayasan"
+                  type="text"
+                  component={renderNoHp}
+                  label="Nomor Telpon/Wa Yayasan"
+                />
               <Field
                 name="emailYayasan"
                 type="text"
                 component={RenderField}
                 label="Email"
-              />
-              <Field
-                name="noYayasan"
-                type="text"
-                component={RenderField}
-                label="Nomor Telpon/Wa"
               />
               <Field
                 name="website"
@@ -88,14 +88,8 @@ class InstitutionHome extends Component {
               <Field
                 name="noPendaftar"
                 type="text"
-                component={RenderField}
+                component={renderNoHp}
                 label="Nomor Telp/Wa"
-              />
-              <Field
-                name="pic"
-                type="text"
-                component={RenderField}
-                label="Pic"
               />
               <Field
                 name="jabatan"
