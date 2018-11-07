@@ -38,13 +38,13 @@ class Tentang extends Component {
                     Sigit : Manager Operasional
                   </li>
                   <li style={styles.li}>
-                    Panut : Manager Finance
+                    Panut : Manager Keuangan
                   </li>
                   <li style={styles.li}>
                     Yohanes Sahrul : Web Developer
                   </li>
                   <li style={styles.li}>
-                    Alang Mahendra : Pemasaran Digital
+                    Alang Mahendra : Digital Marketing
                   </li>
                 </ul>
               </div>
