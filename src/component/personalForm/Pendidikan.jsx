@@ -3,20 +3,19 @@ import { Field, reduxForm } from "redux-form";
 import { Container, Form, Button, Row, Col } from "reactstrap";
 import RenderField from "../RenderField";
 import validate from "./validate";
-// import radioRender from "../radioRender";
-// import { Agama, Tinggal } from "../dropdownRender";
 import {individualFormAction} from '../../actions/individualForm'
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-
-
+import DropKarya from '../dropzoneKarya'
+import DropIjazah from '../dropzoneIjazah'
 class Pendidikan extends Component {
+
 
 submit = (values) =>{
   this.props.individualFormAction(values)
-  }
+}
   render() {
-    const { handleSubmit,previousPage } = this.props;
+    const { handleSubmit,previousPage,pristine,submitting } = this.props;
     
     return (
       <Container>
@@ -42,11 +41,16 @@ submit = (values) =>{
                     label="Pendidikan Informal"
                     component={RenderField}
                 />
+                <Field
+                    name="karya"
+                    component={DropKarya}
+                    label = "Upload Karya-Karya Anda Menggunakan .zip file"
+                />
             </Col>
             <Col  md={6} xs={12}>
             <Field
                     name="bahasa"
-                    type="textarea"
+                    type="text"
                     label="Menguasai Bahasa (sebutkan)"
                     component={RenderField}
                 />
@@ -56,6 +60,11 @@ submit = (values) =>{
                     label="Kegiatan Berorganisasi (sebutkan) "
                     component={RenderField}
                 />
+                <Field
+                    name="ijazah"
+                    component={DropIjazah}
+                    label = "Upload Ijazah Terakhir Dan Sertifikat Pendidikan Informal (jika ada) Anda Menggunakan .zip file"
+                />
             </Col>
           </Row>
           <Row>
@@ -64,7 +73,7 @@ submit = (values) =>{
               <Button color="success" type="submit"  className="previous spasiButton" onClick={previousPage}>
                   KEMBALI
                 </Button>
-                <Button color="info" type="submit" className="spasiButton">
+                <Button color="info" type="submit" className="spasiButton" disabled={pristine || submitting}>
                   SELESAI
                 </Button>
               </center>

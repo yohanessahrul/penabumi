@@ -1,6 +1,8 @@
 import axios from 'axios'
 import history from '../history'
+import alertify from 'alertifyjs';
 export function individualFormAction(values){
+    // console.log(values)
     return dispatch => {
         dispatch(loading())
         axios.post('http://neoal.xyz:3001/api/formuser/sendmail',{values})
@@ -12,6 +14,7 @@ export function individualFormAction(values){
                 }
         })
         .catch(err=>{
+            alertify.alert(err,"terjadi kesalahan Hubungi Kontak")
             dispatch(error(err))
         })
     }

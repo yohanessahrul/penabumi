@@ -9,13 +9,16 @@
     "history": "^4.7.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-dropzone": "^6.0.4",
     "react-icons-kit": "^1.1.12",
+    "react-number-format": "^3.6.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
     "reactstrap": "^6.4.0",
     "redux": "^4.0.0",
     "redux-form": "^7.4.2",
+    "redux-form-website-template": "0.0.123",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
