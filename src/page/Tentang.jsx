@@ -32,16 +32,19 @@ class Tentang extends Component {
                 <h3 style={styles.h3}>Tim Kami</h3>
                 <ul style={{ padding: '0px', margin: '0px' }}>
                   <li style={styles.li}>
-                    Ruben Kurniawan : Pemilik Klinik Taman Anggrek
+                    Ruben Kurniawan : Direktur Utama
                   </li>
                   <li style={styles.li}>
-                    Sigit : Marketing Executive
+                    Sigit : Manager Operasional
                   </li>
                   <li style={styles.li}>
-                    Panut : Finance Staff
+                    Panut : Manager Finance
                   </li>
                   <li style={styles.li}>
-                    Yohanes & Alang : Web Developer
+                    Yohanes Sahrul : Web Developer
+                  </li>
+                  <li style={styles.li}>
+                    Alang Mahendra : Pemasaran Digital
                   </li>
                 </ul>
               </div>
