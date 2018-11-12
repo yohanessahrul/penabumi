@@ -41,6 +41,9 @@ class Tentang extends Component {
                     Panut : Manager Keuangan
                   </li>
                   <li style={styles.li}>
+                    Nashrul Khaitami : Manager Rekrutmen
+                  </li>
+                  <li style={styles.li}>
                     Yohanes Sahrul : Web Developer
                   </li>
                   <li style={styles.li}>

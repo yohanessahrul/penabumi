@@ -8,7 +8,7 @@ export function contactFormAction(email,nama,pesan){
       .then(response=>{
         dispatch(success(response))
       if(response){
-        alertify.alert(`Terimakasih ${nama}, karena telah menghubungi kami, Jika ada hal yang mendesak dapat menghubungi kami via : whatsapp di <b>0812-288-566-99</b> atau melalui email ke: <b>info@penabumi.com</b> !`);
+        alertify.alert('Pesan Terkirim', `Terimakasih ${nama}, karena telah menghubungi kami, Jika ada hal yang mendesak dapat menghubungi kami via : whatsapp di <b>0812-288-566-99</b> atau melalui email ke: <b>info@penabumi.com</b> !`);
       }
     })
     .catch(err=>{
