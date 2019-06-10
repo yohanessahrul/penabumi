@@ -35,9 +35,6 @@ class Tentang extends Component {
                     Ruben Kurniawan : Direktur Utama
                   </li>
                   <li style={styles.li}>
-                    Sigit : Manager Operasional
-                  </li>
-                  <li style={styles.li}>
                     Panut : Manager Keuangan
                   </li>
                   <li style={styles.li}>
@@ -53,14 +50,6 @@ class Tentang extends Component {
               </div>
             </Col>
           </Row>
-          {/* <Row>
-            <Col>
-              <h3 style={{ textAlign: 'center' }}>Sejarah Pendek</h3>
-              <p style={{ color: 'gray' }}>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, asperiores reiciendis est harum sed quas quia hic, sunt, impedit architecto corporis nihil mollitia. Facilis fugiat deleniti nihil hic consectetur vitae!
-              </p>
-            </Col>
-          </Row> */}
         </Container>
         <Footer/>
       </div>

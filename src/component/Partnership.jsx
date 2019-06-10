@@ -20,14 +20,17 @@ class Partnership extends Component {
                 <li>
                   <img style={{ width: '100%',  }} src={'./images/logo-nu.jpeg'} alt="logo-datamedis"/>
                 </li>
-                <li>
+                {/* <li>
                   <img style={{ height: '100%', display: 'table', margin: '0 auto' }} src={'./images/logo-rumah-tahfidz.jpeg'} alt="logo-rumah-tahfidz"/>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <img style={{ width: '100%', display: 'table', marginTop: '10px' }} src={'./images/logo-yayasan-mulia-sejahtera2.jpeg'} alt="logo-yayasan-mulia-sejahtera"/>
-                </li>
+                </li> */}
                 <li>
                   <img style={{ width: '100%', display: 'table', marginTop: '25px' }} src={'./images/logo-sos.png'} alt="logo-sos"/>
+                </li>
+                <li>
+                  <img style={{ width: '100%', display: 'table', marginTop: '-10px' }} src={'./images/naja.png'} alt="logo-naja"/>
                 </li>
               </ul>
             </Col>

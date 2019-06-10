@@ -47,8 +47,10 @@ class Footer extends Component {
                     <div className="footerAddress">
                       <h6 style={{ color: 'white' }}>Kantor Pusat</h6>
                       <p>
-                        Jl Caringin Barat 1 No 29A<br/>
-                        Jakarta Selatan, 12430<br/>
+                        Klinik Central Park Mall<br/>
+                        Jl. Letjen S. Parman, Tj. Duren Sel.,<br/>
+                        Grogol petamburan, <br/>
+                        Jakarta Barat, Jakarta 11470
                       </p>
                     </div>
                   </li>
@@ -57,9 +59,9 @@ class Footer extends Component {
                     <div className="footerAddress">
                       <h6 style={{ color: 'white' }}>Kantor Cabang</h6>
                       <p>
-                        Klinik Syifa Medika<br/>
-                        Jl. Proklamasi, Dusun Sinarsari RT 008/002, Kalangsari<br/>
-                        Rengasdengklok - Karawang 41352<br/>
+                        Klinik Syifa Medika <br/>
+                        Jl. Proklamasi, Dusun Sinarsari <br/> RT 008/002, Kalangsari <br/>
+                        Rengasdengklok - Karawang 41352
                       </p>
                     </div>
                   </li>
