@@ -30,7 +30,7 @@ class Kontak extends Component {
                   <Col md="9" sm="9" xs="9">
                     <h6 style={{ paddingTop: '10px', marginBottom: '0px', fontWeight: 'bold' }}>Kontak</h6>
                     <p style={{ fontSize: '13px', lineHeight: '1.5em', padding: '5px 0px' }}>
-                      Sigit - 0812-2885-6699 (WA) <br/>
+                      Yohanes - 0817-0363-1403 (WA) <br/>
                       <br/>
                     </p>
                   </Col>

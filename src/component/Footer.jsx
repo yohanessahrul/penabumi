@@ -31,7 +31,7 @@ class Footer extends Component {
                     <Icon className="footerAddressIcon" style={{ float: 'left', padding: '0px 10px 10px 0px', marginTop: '2px', color: '#4adebc' }} size={18} icon={phone}/>
                     <div className="footerAddress">
                       <p>
-                        0812 2885 6699
+                        0817 0363 1403
                       </p>
                     </div>
                   </li>
